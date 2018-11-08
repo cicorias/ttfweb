@@ -1,4 +1,12 @@
-export default {
+export const imagePageState = {
+  imagePage: {
+    subjectImage: {
+
+    }
+  }
+}
+
+export const fuelSavings = {
   fuelSavings: {
     newMpg: '',
     tradeMpg: '',

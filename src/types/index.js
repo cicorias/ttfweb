@@ -1,6 +1,23 @@
 // Centralized propType definitions
-import { shape, number, bool, string, oneOfType } from 'prop-types';
+import { shape, number, bool, string, oneOfType, arrayOf } from 'prop-types';
 
+export const imageProperties = shape({
+  imageUri: string,
+  subjectName: string,
+  fatherName: string,
+  motherName: string,
+  birthCountry: string,
+  originCountry: string
+});
+
+export const imagePage = shape({
+  subjectImage: imageProperties,
+  targetImage: imageProperties,
+  candidateImages: arrayOf(imageProperties)
+})
+
+
+// DEMO
 export const fuelSavings = shape({
   newMpg: oneOfType([number,string]),
   tradeMpg: oneOfType([number,string]),
@@ -19,3 +36,4 @@ export const savings = shape({
   annual: oneOfType([number,string]),
   threeYear: oneOfType([number,string]),
 });
+
